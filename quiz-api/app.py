@@ -21,5 +21,14 @@ def PostLogin():
         return {"token": jwt_utils.build_token()}
     return 'Unauthorized', 401
 
+@app.route('/questions', methods=['POST'])
+def PostQuestion():
+    token = request.headers.get('Authorization')
+    if(token):
+        if(jwt_utils.decode_token(token.split(" ")[1]) == "quiz-app-admin"):
+            payload = request.get_json()
+            return {"id" : payload["position"]}
+    return 'Unauthorized', 401
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
