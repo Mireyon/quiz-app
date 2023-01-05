@@ -1,0 +1,24 @@
+{
+    "text": " Dans la mythologie grecque, qui est le fils de Priam, le roi de Troie, et de Hécube, sa reine, qui a été abandonné par son père lorsqu'il a été prédit qu'il causerait la chute de Troie et qui a été sauvé par un dieu et élevé par des bergers avant de devenir un héros célèbre pour ses exploits guerriers et ses prouesses ?",
+    "title": "Jeux et tentations",
+    "image": "falseb64imagecontent",
+    "position": 13,
+    "possibleAnswers": [
+        {
+            "text": "Héraclès",
+            "isCorrect": false 
+        },
+        {
+            "text": "Enée",
+            "isCorrect": false
+        },
+        {
+            "text": "Paris",
+            "isCorrect": true
+        },
+        {
+            "text": "Appolon",
+            "isCorrect": false
+        }
+    ]
+}

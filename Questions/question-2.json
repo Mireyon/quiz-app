@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, quelle est la relation entre Athéna, déesse de la sagesse et de la guerre, et Arachné, une simple mortelle qui était réputée pour sa grande habileté en tissage ?",
+    "title": "SpiderMan",
+    "image": "falseb64imagecontent",
+    "position": 2,
+    "possibleAnswers": [
+        {
+            "text": "Athéna était la mère d'Arachné",
+            "isCorrect": false 
+        },
+        {
+            "text": "Arachné était l'apprentie d'Athéna",
+            "isCorrect": false
+        },
+        {
+            "text": "Athéna et Arachné étaient des rivales",
+            "isCorrect": true
+        },
+        {
+            "text": "Athéna et Arachné étaient amies",
+            "isCorrect": false
+        }
+    ]
+}

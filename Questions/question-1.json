@@ -1,0 +1,24 @@
+{
+    "text": "Qui est le père de Perséphone ?",
+    "title": "Daddy Issue",
+    "image": "falseb64imagecontent",
+    "position": 1,
+    "possibleAnswers": [
+        {
+            "text": "Zeus",
+            "isCorrect": true 
+        },
+        {
+            "text": "Hadès",
+            "isCorrect": false
+        },
+        {
+            "text": "Dionysos",
+            "isCorrect": false
+        },
+        {
+            "text": "Appolon",
+            "isCorrect": false
+        }
+    ]
+}

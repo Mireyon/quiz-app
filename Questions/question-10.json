@@ -1,0 +1,24 @@
+{
+    "text": " la guerre de Troie, connu pour sa bravoure et sa force surhumaines, mais aussi pour sa vulnérabilité à la cheville ?",
+    "title": "Talonné par la concurrence",
+    "image": "falseb64imagecontent",
+    "position": 10,
+    "possibleAnswers": [
+        {
+            "text": "Hector",
+            "isCorrect": false 
+        },
+        {
+            "text": "Agamemnon",
+            "isCorrect": false
+        },
+        {
+            "text": "Ajax",
+            "isCorrect": false
+        },
+        {
+            "text": "Paris",
+            "isCorrect": true
+        }
+    ]
+}

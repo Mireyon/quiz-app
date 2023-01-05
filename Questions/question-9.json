@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est le mari de Méduse, la Gorgone à la tête de serpent qui pouvait transformer les gens en pierre simplement en les regardant dans les yeux ?",
+    "title": "Oh miroir, mon beau miroir..",
+    "image": "falseb64imagecontent",
+    "position": 9,
+    "possibleAnswers": [
+        {
+            "text": "Persée",
+            "isCorrect": false 
+        },
+        {
+            "text": "Poséidon",
+            "isCorrect": true
+        },
+        {
+            "text": "Zéphyt",
+            "isCorrect": false
+        },
+        {
+            "text": "Hadès",
+            "isCorrect": false
+        }
+    ]
+}

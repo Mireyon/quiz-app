@@ -1,0 +1,24 @@
+{
+    "text": "Qui est le père de Perséphone ?",
+    "title": "Inconnu au bataillon",
+    "image": "falseb64imagecontent",
+    "position": 20,
+    "possibleAnswers": [
+        {
+            "text": "Electryon",
+            "isCorrect": true 
+        },
+        {
+            "text": "Alcmène",
+            "isCorrect": false
+        },
+        {
+            "text": "Héraclès",
+            "isCorrect": false
+        },
+        {
+            "text": "Gorgophone",
+            "isCorrect": false
+        }
+    ]
+}

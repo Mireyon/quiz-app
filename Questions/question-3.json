@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, quel est le lien entre Prométhée, un titan qui a défié les dieux, et l'humanité, qu'il a aidée à sortir de l'obscurité et de l'ignorance ?",
+    "title": "Vous avez du feu?",
+    "image": "falseb64imagecontent",
+    "position": 3,
+    "possibleAnswers": [
+        {
+            "text": "Prométhée était le créateur de l'humanité",
+            "isCorrect": false 
+        },
+        {
+            "text": "Prométhée était le premier roi de l'humanité",
+            "isCorrect": false
+        },
+        {
+            "text": "Prométhée était le protecteur de l'humanité",
+            "isCorrect": true
+        },
+        {
+            "text": "Prométhée était l'ennemi de l'humanité",
+            "isCorrect": false
+        }
+    ]
+}

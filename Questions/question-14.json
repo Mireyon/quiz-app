@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est l'épouse de Dionysos, dieu de la vinification, de la fête et de la démence, qui était célébré lors de rituels de possession et de transe dans lesquels les gens perdaient le contrôle de leurs actions et de leurs émotions ?",
+    "title": "Elle a retrouvé son chemin",
+    "image": "falseb64imagecontent",
+    "position": 14,
+    "possibleAnswers": [
+        {
+            "text": "Aphrodite",
+            "isCorrect": false 
+        },
+        {
+            "text": "Ariane",
+            "isCorrect": true
+        },
+        {
+            "text": "Cysiphe",
+            "isCorrect": false
+        },
+        {
+            "text": "Circé",
+            "isCorrect": false
+        }
+    ]
+}

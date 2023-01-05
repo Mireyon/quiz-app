@@ -1,0 +1,24 @@
+{
+    "text": "Selon la mythologie grecque, qui a créé les Cyclopes, des géants à un œil unique et à la force prodigieuse, qui ont été les forgerons des dieux et qui ont fabriqué notamment l'éclair de Zeus et la foudre d'Hadès ?",
+    "title": "Ils vous ont à l'oeuil..",
+    "image": "falseb64imagecontent",
+    "position": 7,
+    "possibleAnswers": [
+        {
+            "text": "Les Titans",
+            "isCorrect": true 
+        },
+        {
+            "text": "Les dieux Olympiens",
+            "isCorrect": false
+        },
+        {
+            "text": "Les Gorgones",
+            "isCorrect": false
+        },
+        {
+            "text": "Les harpies",
+            "isCorrect": false
+        }
+    ]
+}

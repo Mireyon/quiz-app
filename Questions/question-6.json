@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui a tué Médée, la fille du roi de Colchide et l'épouse du héros Jason, qui était connue pour sa grande intelligence et pour sa capacité à utiliser la magie et les poisons pour atteindre ses objectifs ?",
+    "title": "Médée",
+    "image": "falseb64imagecontent",
+    "position": 6,
+    "possibleAnswers": [
+        {
+            "text": "Jason",
+            "isCorrect": false 
+        },
+        {
+            "text": "Le roi de Colchide",
+            "isCorrect": false
+        },
+        {
+            "text": "Les Amazones",
+            "isCorrect": false
+        },
+        {
+            "text": "Elle-même",
+            "isCorrect": true
+        }
+    ]
+}

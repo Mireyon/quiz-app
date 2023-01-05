@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est le fils de Poséidon, dieu de la mer, des tremblements de terre et des chevaux, connu pour son caractère emporté et impétueux ?",
+    "title": "Petite sirène",
+    "image": "falseb64imagecontent",
+    "position": 4,
+    "possibleAnswers": [
+        {
+            "text": "Zéphyr",
+            "isCorrect": false 
+        },
+        {
+            "text": "Triton",
+            "isCorrect": true
+        },
+        {
+            "text": "Arès",
+            "isCorrect": false
+        },
+        {
+            "text": "Orphée",
+            "isCorrect": false
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est le fils de Héraclès, le demi-dieu célèbre pour ses prouesses et ses exploits guerriers, et de Megara, sa première épouse, qui a été tuée par Héraclès lorsqu'il était possédé par l'un de ses accès de folie meurtrière ?",
+    "title": "Not Disney friendly",
+    "image": "falseb64imagecontent",
+    "position": 15,
+    "possibleAnswers": [
+        {
+            "text": "Electryon",
+            "isCorrect": false 
+        },
+        {
+            "text": "Persée",
+            "isCorrect": false
+        },
+        {
+            "text": "Déicoon",
+            "isCorrect": true
+        },
+        {
+            "text": "Iphiclès",
+            "isCorrect": false
+        }
+    ]
+}

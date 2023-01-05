@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est considéré comme le créateur des Humains, ces êtres mortels qui peuplent la Terre et qui sont soumis à la naissance, à la vieillesse et à la mort ?",
+    "title": "Syndrome de Frankeinstein",
+    "image": "falseb64imagecontent",
+    "position": 19,
+    "possibleAnswers": [
+        {
+            "text": "Gaîa",
+            "isCorrect": false 
+        },
+        {
+            "text": "Chronos",
+            "isCorrect": false
+        },
+        {
+            "text": "Prométhée",
+            "isCorrect": true
+        },
+        {
+            "text": "Appolon",
+            "isCorrect": false
+        }
+    ]
+}

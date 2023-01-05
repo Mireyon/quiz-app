@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est le père de Dionysos, dieu de la vinification, de la fête et de la démence, qui était célébré lors de rituels de possession et de transe dans lesquels les gens perdaient le contrôle de leurs actions et de leurs émotions ?",
+    "title": "Claquage de la cuisse",
+    "image": "falseb64imagecontent",
+    "position": 8,
+    "possibleAnswers": [
+        {
+            "text": "Apollon",
+            "isCorrect": false 
+        },
+        {
+            "text": "Héphaistos",
+            "isCorrect": false
+        },
+        {
+            "text": "Zeus",
+            "isCorrect": true
+        },
+        {
+            "text": "Hadès",
+            "isCorrect": false
+        }
+    ]
+}

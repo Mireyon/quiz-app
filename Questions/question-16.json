@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est le fils de Laïos, le roi de Thèbes, et de Jocaste, sa reine et épouse, qui est devenue son propre frère et son époux après avoir ignoré les prophéties qui prédisaient que leur enfant causerait la chute de Thèbes ?",
+    "title": "Situation complexe",
+    "image": "falseb64imagecontent",
+    "position": 16,
+    "possibleAnswers": [
+        {
+            "text": "Antigone",
+            "isCorrect": false 
+        },
+        {
+            "text": "Oedipe",
+            "isCorrect": true
+        },
+        {
+            "text": "Etéocle",
+            "isCorrect": false
+        },
+        {
+            "text": "Polynice",
+            "isCorrect": false
+        }
+    ]
+}

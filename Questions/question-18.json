@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est la mère de Persée, le héros qui a tué Méduse et qui a sauvé Andromède de la terrifiante créature marine connue sous le nom de Cétus ?",
+    "title": "Pur produit laitier",
+    "image": "falseb64imagecontent",
+    "position": 18,
+    "possibleAnswers": [
+        {
+            "text": "Alcmène",
+            "isCorrect": false 
+        },
+        {
+            "text": "Danaé",
+            "isCorrect": true
+        },
+        {
+            "text": "Hestia",
+            "isCorrect": false
+        },
+        {
+            "text": "Athéna",
+            "isCorrect": false
+        }
+    ]
+}

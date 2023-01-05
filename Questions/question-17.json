@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est le père de Thésée, le roi et héros de la ville d'Athènes, connu pour son intelligence et sa force surhumaines, ainsi que pour avoir tué le Minotaure dans le labyrinthe de Crète ?",
+    "title": "C'est pas l'homme qui prend la mer",
+    "image": "falseb64imagecontent",
+    "position": 1,
+    "possibleAnswers": [
+        {
+            "text": "Egée",
+            "isCorrect": true 
+        },
+        {
+            "text": "Zeus",
+            "isCorrect": false
+        },
+        {
+            "text": "Poséidon",
+            "isCorrect": false
+        },
+        {
+            "text": "Prométhée",
+            "isCorrect": false
+        }
+    ]
+}

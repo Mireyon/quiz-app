@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui est considéré comme le créateur du monde et de tous les êtres vivants qui y habitent ?",
+    "title": "Nature et découverte",
+    "image": "falseb64imagecontent",
+    "position": 11,
+    "possibleAnswers": [
+        {
+            "text": "Gaîa",
+            "isCorrect": true 
+        },
+        {
+            "text": "Ouranos",
+            "isCorrect": false
+        },
+        {
+            "text": "Chronos",
+            "isCorrect": false
+        },
+        {
+            "text": "Zeus",
+            "isCorrect": false
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "text": "Dans la mythologie grecque, qui a découvert le fil d'Ariane, la fille du roi de Crète et de Pasiphaé, qui a été donnée à Thésée pour l'aider à sortir du labyrinthe où il avait été enfermée par le roi Minos ?",
+    "title": "Théorie des graphes?",
+    "image": "falseb64imagecontent",
+    "position": 12,
+    "possibleAnswers": [
+        {
+            "text": "Thésée",
+            "isCorrect": true 
+        },
+        {
+            "text": "Perseus",
+            "isCorrect": false
+        },
+        {
+            "text": "Béllérophon",
+            "isCorrect": false
+        },
+        {
+            "text": "Pan",
+            "isCorrect": false
+        }
+    ]
+}
