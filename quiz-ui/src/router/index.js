@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,13 +11,28 @@ const router = createRouter({
       component: HomePage,
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/questions',
+      name: 'Questions',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
+      component: () => import('../views/Questions.vue')
+    },
+    {
+      path: '/start-new-quiz-page' ,
+      name: 'NewQuizPage',
+      component: () => import('../views/NewQuizPage.vue')
+    },
+    {
+      path: '/score-page' ,
+      name: 'ScorePage',
+      component: () => import('../views/ScorePage.vue')
+    },
+    {
+      path: '/admin' ,
+      name: 'AdminLogin',
+      component: () => import('../views/Admin.vue')
+    },
   ]
 })
 

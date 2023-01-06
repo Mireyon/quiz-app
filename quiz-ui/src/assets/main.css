@@ -1,35 +1,202 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+h1, h2, h3{
+  text-align: center;
 }
 
-a,
-.green {
+.center {
+  display: block;
+  margin: auto;
+}
+
+.container{
+  width:384px;
+  height:216px;
+}
+
+.square-image {
+  width: 100%;
+  height: 100%;
+}
+
+.rounded-borders {
+  border-radius: 10%;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: #007bff;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:repeat(2,1fr);
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  width: 500px;
+  margin: auto;
+}
+
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+  background-color: rgb(255, 255, 255);
+  color: #333;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid rgb(95, 95, 95);
+  border-top: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.header-nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+  transition: color 0.2s ease-in-out;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+.header-nav-link:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(75, 182, 84);
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-row {
+  text-align: center;
+}
+
+.color-shift-button {
+  background: rgb(245, 145, 145);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.color-shift-button:hover::after {
+  content: " RIGHT NOWWWW !!!";
+}
+
+.color-shift-button:hover {
+  background: linear-gradient(to right, #fadadd, #ffd6e7, #e0f2f1, #b2dfdb, #80cbc4, #4db6ac, #26a69a, #00bcd4, #00acc1, #9fa8da, #7986cb, #5c6bc0, #3f51b5, #3949ab);
+  background-size: 300% 300%;
+  animation: color-shift 1s ease-in-out infinite;
+}
+
+@keyframes color-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+/* Table */
+.table-container {
+  width: 50%;
+  margin: 0 auto;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.score-table-header {
+  background-color: #333;
+  color: #fff;
+}
+
+.score-table-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.score-table-row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.score-table td,
+.score-table th {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.red{
+  color:crimson;
+}
+
+.create-question:hover::after {
+  content: " Create question";
+}
+
+.btn-questions{
+  width: 500px;
+  margin-top: 1rem;
+}
+
+.right{
+  display: block;
+  margin-left: 90%;
+}
+
+.margin-top{
+  margin-top: 4px;
+}
+
+.form-column{
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-column input{
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:4px;
+  margin-bottom:4px;
+}
+
+.side{
+  display:block;
+  margin-top: 10px;
+}
+
+.margin-element{
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+p{
+  margin-top: 6px;
+  margin-bottom: 0;
 }

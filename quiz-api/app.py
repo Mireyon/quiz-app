@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_cors import CORS
 import jwt_utils
-from process_questions import json2python, add_db, get_db, empty_db, update_db, delete_db, QuizInfo, send_participation, rebuild_db
+from process_questions import json2python, add_db, get_db, empty_db, update_db, delete_db, QuizInfo, send_participation, rebuild_db, get_all_db
 
 app = Flask(__name__)
 CORS(app)
@@ -33,7 +33,9 @@ def PostQuestion():
 
 @app.route('/questions', methods=['GET'])
 def GetQuestionByPosition():
-    position = request.args.get('position', type = int)
+    position = request.args.get('position')
+    if(position=="all"):
+        return get_all_db()
     return get_db(position=position)
 
 @app.route('/questions/<questionId>', methods=['GET'])

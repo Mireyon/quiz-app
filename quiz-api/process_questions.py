@@ -1,5 +1,6 @@
 import sqlite3
 import json
+from collections import defaultdict 
 
 def pageNotFound(func):
     def wrapper(*args, **kwargs):
@@ -154,6 +155,31 @@ def empty_db():
     close_connection(db_connection, cur)
     return 'Ok', 204
 
+def get_all_db():
+    list_questions = []
+
+    db_connection, cur = connect_db()
+    question_query = f'SELECT rowid, * FROM Question'
+    question_result = cur.execute(question_query)
+    question_data = question_result.fetchall()
+
+    answer_query = f'SELECT * FROM Answer'
+    answer_result = cur.execute(answer_query)
+    answer_data = answer_result.fetchall()
+
+    for question_tuple in question_data:
+        questionId, text, title, image, position = question_tuple
+        list_answers = [x[2:] for x in answer_data if x[0] == questionId]
+        possibleAnswers = [{"text": element[0], "isCorrect": element[1]} for element in list_answers]
+        question = Question(text, title, image, position, possibleAnswers)
+        question.id = questionId
+        list_questions.append(python2json(question))
+    
+    list_questions = sorted(list_questions, key=lambda x: x["position"])
+
+    close_connection(db_connection, cur)
+    return list_questions 
+
 def rebuild_db():
     db_connection, cur = connect_db()
     cur.execute("SELECT name FROM sqlite_master WHERE type='table'")
@@ -211,3 +237,4 @@ def send_participation(payload):
     return participant, 200
     
 
+ 

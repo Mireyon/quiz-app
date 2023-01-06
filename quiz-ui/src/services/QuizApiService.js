@@ -24,13 +24,25 @@ export default {
         return { status: response.status, data: response.data };
       })
       .catch((error) => {
-        console.error(error);
+        return {status:error.response.status, data:error.response.data};
       });
   },
   getQuizInfo() {
     return this.call("get", "quiz-info");
   },
   getQuestion(position) {
-    // not implemented
-  }
+    return this.call("get", 'questions?position='+position);
+  },
+  sendParticipation(payload){
+    return this.call("post", 'participations', payload);
+  },
+  sendLogin(payload){
+    return this.call("post", 'login', payload);
+  },
+  deleteQuestion(questionId, token){
+    return this.call("delete", 'questions/'+questionId, null, token);
+  },
+  sendQuestion(payload, token){
+    return this.call("post", 'questions', payload, token);
+  },
 };
