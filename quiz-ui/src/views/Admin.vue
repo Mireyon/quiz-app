@@ -18,7 +18,7 @@
     <QuestionEdition @go-back="goBack" @question-edit="questionEdition" @question-deleted="questionDeleted" v-bind:question="this.question"></QuestionEdition>
   </div>
   <div v-else-if="this.adminMode=='question-edition-display'">
-    <QuestionEditionDisplay @send-question="sendQuestion" @go-back="goBack" v-bind:question="this.question"></QuestionEditionDisplay>
+    <QuestionEditionDisplay @update-question="updateQuestion" @send-question="sendQuestion" @go-back="goBack" v-bind:question="this.question"></QuestionEditionDisplay>
   </div>
 </template>
 
@@ -84,6 +84,11 @@
       async sendQuestion(payload){
         var token = TokenManager.getToken();
         var response = await QuizApiService.sendQuestion(payload, token);
+        this.adminMode='question-list';
+      },
+      async updateQuestion(questionId, payload){
+        var token = TokenManager.getToken();
+        var response = await QuizApiService.updateQuestion(questionId, payload, token);
         this.adminMode='question-list';
       }
     } 

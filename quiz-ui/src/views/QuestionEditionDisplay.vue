@@ -27,7 +27,8 @@
 
     <br><p>Possible answers</p>
     <div v-for="i in 4">
-      <input type="radio" v-bind:checked="possibleAnswers[i-1].isCorrect"/>
+      <input name="button" type="radio" v-if="possibleAnswers[i-1].isCorrect" checked="checked"/>
+      <input name="button" type="radio" v-else/>
       <input type="text" v-model="possibleAnswers[i-1].text" :title="position" />
     </div>
     <div class="side">    
@@ -39,7 +40,7 @@
 </template>
 <script>
 export default {
-  emits: ["file-change", "go-back", "send-question"],
+  emits: ["file-change", "go-back", "send-question", "update-question"],
   data() {
     return {
       isSaving: false,
@@ -110,7 +111,13 @@ export default {
         this.isNotImage = true;
         return;
       }
-      this.$emit("send-question", {"text":this.text, "title":this.title, "image":this.image, "position":this.position, "possibleAnswers":this.possibleAnswers});
+      // console.log(question);
+      if(this.question==null){
+        this.$emit("send-question", {"text":this.text, "title":this.title, "image":this.image, "position":this.position, "possibleAnswers":this.possibleAnswers});
+      }
+      else{
+        this.$emit("update-question", this.question.id, {"text":this.text, "title":this.title, "image":this.image, "position":this.position, "possibleAnswers":this.possibleAnswers});
+      }
     },
   }
 };

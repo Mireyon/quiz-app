@@ -44,8 +44,11 @@ def GetQuestionById(questionId):
 
 @app.route('/questions/<questionId>', methods=['PUT'])
 def UpdateQuestion(questionId):
-    payload = request.get_json()
-    return update_db(id=questionId, question=json2python(payload))
+    token = request.headers.get('Authorization')
+    if(token):
+        payload = request.get_json()
+        return update_db(id=questionId, question=json2python(payload))
+    return 'Unauthorized', 401
 
 @app.route('/questions/<questionId>', methods=['DELETE'])
 def DeleteQuestion(questionId):

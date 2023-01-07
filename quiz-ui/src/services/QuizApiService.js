@@ -45,4 +45,7 @@ export default {
   sendQuestion(payload, token){
     return this.call("post", 'questions', payload, token);
   },
+  updateQuestion(questionId, payload, token){
+    return this.call("put", 'questions/'+questionId, payload, token);
+  },
 };

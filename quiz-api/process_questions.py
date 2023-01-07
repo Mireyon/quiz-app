@@ -83,7 +83,7 @@ def update_position(delete_pos = None, add_pos = None, previous_pos = None, curr
         return
 
     #update
-    if(previous_pos<current_pos):
+    if(previous_pos<int(current_pos)):
         change_pos = cur.execute(f'UPDATE Question SET position = position - 1 WHERE position>={previous_pos} AND position<={current_pos}')
         change_pos = cur.execute(f'UPDATE Answer SET position = position - 1 WHERE position>={previous_pos} AND position<={current_pos}')
     else:
