@@ -198,7 +198,7 @@ def get_correctAnswers(answers):
     output = cur.execute(f'SELECT GROUP_CONCAT(isCorrect) FROM Answer GROUP BY position')
     output = output.fetchall()
     for element, answer in zip(output, answers):
-        correct_answer = element[0].split(",").index('1') + 1
+        correct_answer = element[0].split(",").index('1')
         if(correct_answer==answer):
             score += 1
     close_connection(db_connection, cur)

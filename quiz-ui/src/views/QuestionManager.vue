@@ -5,7 +5,7 @@
 <script>
   import participationStorageService from "@/services/ParticipationStorageService";
   import QuizApiService from "@/services/QuizApiService";
-  import QuestionDisplay from './QuestionDisplay.vue';
+  import QuestionDisplay from '@/components/QuestionDisplay.vue';
   
   export default {
     name: 'QuestionManager',

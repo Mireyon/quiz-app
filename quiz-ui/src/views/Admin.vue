@@ -1,13 +1,13 @@
 <template>
-  <button v-if="this.adminMode!='login'" type="button" class="btn right btn-outline-warning" @click="clearToken">Logout</button>
+  <button v-if="this.adminMode!='login'" type="button" class="btn right btn-outline-warning" @click="clearToken">Déconnexion</button>
   <div v-if="this.adminMode=='login'">
     <div class="form-container">
       <form @submit.prevent="connectAdmin">
         <label for="password">Password&nbsp;:</label>
         <p class="form-row"><input autocomplete="off" type="password" placeholder="password" v-model="password" /></p>
 
-        <p class="form-row"><button type="submit" class="btn btn-outline-danger">Connect</button></p>
-        <div v-if="this.status==401"><p class="form-row red">Wrong password !</p></div>
+        <p class="form-row"><button type="submit" class="btn btn-outline-danger">Connexion</button></p>
+        <div v-if="this.status==401"><p class="form-row red">Mauvais mot de passe !</p></div>
       </form>
     </div>
   </div>
@@ -24,9 +24,9 @@
 
 <script>
   import TokenManager from "@/services/TokenManager"
-  import QuestionList from "./QuestionList.vue"
-  import QuestionEdition from "./QuestionEdition.vue"
-  import QuestionEditionDisplay from "./QuestionEditionDisplay.vue"
+  import QuestionList from "@/components/QuestionList.vue"
+  import QuestionEdition from "@/components/QuestionEdition.vue"
+  import QuestionEditionDisplay from "@/components/QuestionEditionDisplay.vue"
   import QuizApiService from "@/services/QuizApiService";
 
   export default {
@@ -41,9 +41,9 @@
       QuestionEdition,
       QuestionEditionDisplay
     },
-    created(){
-      var token = TokenManager.getToken();
-      if(token!=null){
+    async created(){
+      var token = await TokenManager.getToken();
+      if(token){
         this.adminMode = 'question-list';
       }
     },
@@ -55,6 +55,7 @@
           TokenManager.saveToken(loginResult.data.token);
           this.adminMode='question-list';
         }
+        this.password = '';
       },
       clearToken(){
         TokenManager.clear();
@@ -65,9 +66,14 @@
         this.question = question;
       },
       async questionDeleted(id){
-        var token = TokenManager.getToken();
-        var response = await QuizApiService.deleteQuestion(id, token);
-        this.adminMode='question-list';
+        var token = await TokenManager.getToken();
+        if(token){
+          var response = await QuizApiService.deleteQuestion(id, token);
+          this.adminMode='question-list';
+        }
+        else{
+          this.clearToken();
+        }
       },
       questionEdition(question){
         this.adminMode='question-edition-display';
@@ -82,14 +88,24 @@
         else{this.questionClickedHandler(question)}
       },
       async sendQuestion(payload){
-        var token = TokenManager.getToken();
-        var response = await QuizApiService.sendQuestion(payload, token);
-        this.adminMode='question-list';
+        var token = await TokenManager.getToken();
+        if(token){
+          var response = await QuizApiService.sendQuestion(payload, token);
+          this.adminMode='question-list';
+        }
+        else{
+          this.clearToken();
+        }
       },
       async updateQuestion(questionId, payload){
-        var token = TokenManager.getToken();
-        var response = await QuizApiService.updateQuestion(questionId, payload, token);
-        this.adminMode='question-list';
+        var token = await TokenManager.getToken();
+        if(token){
+          var response = await QuizApiService.updateQuestion(questionId, payload, token);
+          this.adminMode='question-list';
+        }
+        else{
+          this.clearToken();
+        }
       }
     } 
 }

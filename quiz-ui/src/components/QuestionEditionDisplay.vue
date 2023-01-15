@@ -1,12 +1,13 @@
 <template>
-  <form class="form-container form-column">
+  <form id="form" class="form-container form-column" @submit.prevent="saveQuestion">
     <p>Position : </p>
-    <input type="text" v-model="position" :title="position" />
-    <p>Title : </p>
-    <input type="text" v-model="title" :title="position" />
+    <div class="side"><input type="number" v-model="position" :title="position" v-on:input="validatePositiveInteger" required/></div>
+    <p>Titre : </p>
+    <input type="text" v-model="title" :title="position" required/>
     <p>Question : </p>
-    <input type="text" v-model="text" :title="position" />
-    <p>Image : </p><input
+    <input type="text" v-model="text" :title="position" required/>
+    <p>Image : </p>
+    <input
       tabindex="-1"
       type="file"
       name="uploadInput"
@@ -14,8 +15,8 @@
       @change="fileChange"
       accept="image/jpeg, image/png, image/gif"
       class="input-file"
-      ref="fileInput"
-    />
+      ref="fileInput"/>
+
     <a class="image-upload-remove-link" 
       href="#" 
       v-if="file" 
@@ -24,20 +25,21 @@
     </a>
 
     <div class="container" v-if="this.image!='image'"><img class="center square-image rounded-borders" :src="this.image" /></div>
+    <div class="red" v-else>Il faut une image</div>
 
-    <br><p>Possible answers</p>
+    <p>Réponses possibles</p>
     <div v-for="i in 4">
       <input name="button" type="radio" v-if="possibleAnswers[i-1].isCorrect" checked="checked"/>
       <input name="button" type="radio" v-else/>
-      <input type="text" v-model="possibleAnswers[i-1].text" :title="position" />
+      <input type="text" v-model="possibleAnswers[i-1].text" :title="position" required/>
     </div>
     <div class="side">    
-      <button type="button" class="btn btn-outline-danger margin-element" @click="goBack">Back</button>
-      <button type="button" class="btn btn-outline-success margin-element" @click="saveQuestion">Save</button>
-      <div v-if="isNotImage"><p class="form-row red">You need an image</p></div>
+      <button type="button" class="btn btn-outline-danger margin-element" @click="goBack">Retour</button>
+      <button type="submit" class="btn btn-outline-success margin-element">Sauvegarder</button>
     </div>
   </form>
 </template>
+
 <script>
 export default {
   emits: ["file-change", "go-back", "send-question", "update-question"],
@@ -48,8 +50,7 @@ export default {
       fileInput: null,
       file: null,
 
-      isNotImage: false,
-      position:'position',
+      position:'1',
       title: 'title',
       text:'question',
       image:'image',
@@ -83,6 +84,7 @@ export default {
       this.text = this.question.text;
       this.image = this.question.image;
       this.possibleAnswers = this.question.possibleAnswers;
+      this.file=true;
     }
   },
   methods: {
@@ -106,18 +108,28 @@ export default {
     goBack(){
       this.$emit("go-back", this.question);
     },
+    validatePositiveInteger(event) {
+      if (!Number.isInteger(+event.target.value) || +event.target.value < 1) {
+        event.target.value = '1'
+      }
+    },
     saveQuestion(){
-      if(this.image=='image'){
-        this.isNotImage = true;
+      if(this.image == 'image'){
         return;
       }
-      // console.log(question);
       if(this.question==null){
         this.$emit("send-question", {"text":this.text, "title":this.title, "image":this.image, "position":this.position, "possibleAnswers":this.possibleAnswers});
       }
       else{
+        document.getElementsByName("button").forEach((element, index) => {
+          if(element.checked)
+            this.possibleAnswers[index].isCorrect = true;
+          else
+            this.possibleAnswers[index].isCorrect = false;
+        });
         this.$emit("update-question", this.question.id, {"text":this.text, "title":this.title, "image":this.image, "position":this.position, "possibleAnswers":this.possibleAnswers});
       }
+      return false;
     },
   }
 };

@@ -7,8 +7,19 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
-def hello_world():
-	return f"Hello, world"
+def API_test():
+	return f"The API is working !"
+
+@app.route('/token', methods=['POST'])
+def PostToken():
+    token = request.headers.get('Authorization')
+    if(token):
+        try:
+            jwt_utils.decode_token(token.split(" ")[1])
+            return 'Ok', 200
+        except:
+            return 'Unauthorized', 401
+    return 'Unauthorized', 401
 
 @app.route('/quiz-info', methods=['GET'])
 def GetQuizInfo():

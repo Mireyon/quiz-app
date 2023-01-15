@@ -1,6 +1,6 @@
 <template>
   <button type="button" class="btn btn-outline-success create-question center" @click="createQuestion">+</button>
-  <h1>List of questions</h1>
+  <h1>Liste des questions</h1>
   <div v-for="(question,index) in questions">
     <button class="btn btn-primary btn-questions center" type="button" @click="emitQuestion(question)">{{ question.title }} : {{ question.text }}</button>
   </div>
