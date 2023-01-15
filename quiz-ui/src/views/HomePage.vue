@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <div class="homepage-image">
-      <img class="square-image rounded-borders" src="/src/assets/mythology_quiz.png" />
+      <img class="square-image rounded-borders" src="../assets/mythology_quiz.png" />
     </div>
 
     <div class="homepage-start">

@@ -279,7 +279,7 @@ input:invalid {
 .timebar {
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 70%; /* Initial width of the timebar */
+  width: min(70%, 800px);
   height: 20px; /* Height of the timebar */
   background-color: #ffffff;
   border: 1px solid #007bff;
@@ -305,7 +305,7 @@ input:invalid {
 .container-question{
   display: grid;
   grid-template-rows: 0.2fr 0.8fr;
-  width: 70%;
+  width: min(70%, 800px);
   height: 350px;
   border-radius: 20px;
 }
